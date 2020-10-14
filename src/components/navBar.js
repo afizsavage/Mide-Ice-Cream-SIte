@@ -1,6 +1,5 @@
 import React from "react"
 import { Link } from "gatsby"
-
 import { Navbar, Nav, Form, FormControl, Button } from "react-bootstrap"
 
 const CustomNavbar = ({ pageInfo }) => {
@@ -10,17 +9,36 @@ const CustomNavbar = ({ pageInfo }) => {
       <Navbar variant="dark" expand="lg" id="site-navbar">
         {/* <Container> */}
         <Link to="/" className="link-no-style">
-          <Navbar.Brand as="span">Gatsby React Bootstrap</Navbar.Brand>
+          <Navbar.Brand as="span">Logo</Navbar.Brand>
         </Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="mr-auto" activeKey={pageInfo && pageInfo.pageName}>
+          <Nav
+            className="mr-auto ml-auto"
+            activeKey={pageInfo && pageInfo.pageName}
+          >
+            <Link to="/page-2" className="link-no-style">
+              <Nav.Link as="span" eventKey="page-2">
+                Page 1
+              </Nav.Link>
+            </Link>
             <Link to="/page-2" className="link-no-style">
               <Nav.Link as="span" eventKey="page-2">
                 Page 2
               </Nav.Link>
             </Link>
+            <Link to="/page-2" className="link-no-style">
+              <Nav.Link as="span" eventKey="page-2">
+                Page 3
+              </Nav.Link>
+            </Link>
+            <Link to="/page-2" className="link-no-style">
+              <Nav.Link as="span" eventKey="page-2">
+                Page 4
+              </Nav.Link>
+            </Link>
           </Nav>
+
           <Nav className="ml-auto">
             <Form inline onSubmit={e => e.preventDefault()}>
               <Form.Group>
