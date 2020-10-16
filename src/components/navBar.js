@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import { Navbar, Nav, Form, FormControl, Button } from "react-bootstrap"
+import Logo from "../images/logo.png"
 
 const CustomNavbar = ({ pageInfo }) => {
   console.log(pageInfo)
@@ -9,7 +10,9 @@ const CustomNavbar = ({ pageInfo }) => {
       <Navbar variant="dark" expand="lg" id="site-navbar">
         {/* <Container> */}
         <Link to="/" className="link-no-style">
-          <Navbar.Brand as="span">Logo</Navbar.Brand>
+          <Navbar.Brand as="span">
+            <img src={Logo} fluid alt="Mide's Ice Cream" />
+          </Navbar.Brand>
         </Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
