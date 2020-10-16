@@ -1,7 +1,12 @@
 import React from "react"
 import { Link } from "gatsby"
-import { Navbar, Nav, Form, FormControl, Button } from "react-bootstrap"
+import { Navbar, Nav } from "react-bootstrap"
 import Logo from "../images/logo.png"
+import {
+  AiOutlineUserAdd,
+  AiOutlineEnvironment,
+  AiOutlineSearch,
+} from "react-icons/ai"
 
 const CustomNavbar = ({ pageInfo }) => {
   console.log(pageInfo)
@@ -11,7 +16,7 @@ const CustomNavbar = ({ pageInfo }) => {
         {/* <Container> */}
         <Link to="/" className="link-no-style">
           <Navbar.Brand as="span">
-            <img src={Logo} fluid alt="Mide's Ice Cream" />
+            <img src={Logo} fluid alt={"Mide's Ice Cream"} />
           </Navbar.Brand>
         </Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -43,16 +48,21 @@ const CustomNavbar = ({ pageInfo }) => {
           </Nav>
 
           <Nav className="ml-auto">
-            <Form inline onSubmit={e => e.preventDefault()}>
-              <Form.Group>
-                <FormControl
-                  type="text"
-                  placeholder="Fake Search"
-                  className="mr-2"
-                />
-              </Form.Group>
-              <Button>Fake Button</Button>
-            </Form>
+            <Link to="/page-2" className="link-no-style">
+              <Nav.Link as="span" eventKey="page-2">
+                <AiOutlineSearch size={28} />
+              </Nav.Link>
+            </Link>
+            <Link to="/page-2" className="link-no-style">
+              <Nav.Link as="span" eventKey="page-2">
+                <AiOutlineEnvironment size={28} />
+              </Nav.Link>
+            </Link>
+            <Link to="/page-2" className="link-no-style">
+              <Nav.Link as="span" eventKey="page-2">
+                <AiOutlineUserAdd size={28} />
+              </Nav.Link>
+            </Link>
           </Nav>
         </Navbar.Collapse>
         {/* </Container> */}

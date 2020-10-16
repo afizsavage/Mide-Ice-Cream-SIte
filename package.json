@@ -17,7 +17,7 @@
     "@mdx-js/react": "^1.6.18",
     "acorn": "^6.4.2",
     "bootstrap": "^4.5.3",
-    "gatsby": "^2.24.67",
+    "gatsby": "^2.24.80",
     "gatsby-plugin-manifest": "^2.4.34",
     "gatsby-plugin-react-helmet": "^3.3.14",
     "gatsby-plugin-sass": "^2.3.16",
