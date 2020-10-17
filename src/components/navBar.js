@@ -8,6 +8,21 @@ import {
   AiOutlineSearch,
 } from "react-icons/ai"
 
+const NavDropDown = ({ dropDownName }) => (
+  <div className="dropdown">
+    <Link to="/page-2">
+      <Nav.Link as="span" eventKey="page-2" className="dropbtn">
+        {dropDownName}
+      </Nav.Link>
+    </Link>
+    <div className="dropdown-content">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div>
+  </div>
+)
+
 const CustomNavbar = ({ pageInfo }) => {
   console.log(pageInfo)
   return (
@@ -16,7 +31,7 @@ const CustomNavbar = ({ pageInfo }) => {
         {/* <Container> */}
         <Link to="/" className="link-no-style">
           <Navbar.Brand as="span">
-            <img src={Logo} fluid alt={"Mide's Ice Cream"} />
+            <img src={Logo} alt={"Mide's Ice Cream"} width={200} height={71} />
           </Navbar.Brand>
         </Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -25,26 +40,10 @@ const CustomNavbar = ({ pageInfo }) => {
             className="mr-auto ml-auto"
             activeKey={pageInfo && pageInfo.pageName}
           >
-            <Link to="/page-2" className="link-no-style">
-              <Nav.Link as="span" eventKey="page-2">
-                Page 1
-              </Nav.Link>
-            </Link>
-            <Link to="/page-2" className="link-no-style">
-              <Nav.Link as="span" eventKey="page-2">
-                Page 2
-              </Nav.Link>
-            </Link>
-            <Link to="/page-2" className="link-no-style">
-              <Nav.Link as="span" eventKey="page-2">
-                Page 3
-              </Nav.Link>
-            </Link>
-            <Link to="/page-2" className="link-no-style">
-              <Nav.Link as="span" eventKey="page-2">
-                Page 4
-              </Nav.Link>
-            </Link>
+            <NavDropDown dropDownName={"FLAVOURS"} />
+            <NavDropDown dropDownName={"CATERING"} />
+            <NavDropDown dropDownName={"VALUES"} />
+            <NavDropDown dropDownName={"ABOUT US"} />
           </Nav>
 
           <Nav className="ml-auto">
