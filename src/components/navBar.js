@@ -10,7 +10,7 @@ import {
 
 const NavDropDown = ({ dropDownName }) => (
   <div className="dropdown">
-    <Link to="/page-2">
+    <Link to="/page-2" className="text-decoration-none">
       <Nav.Link as="span" eventKey="page-2" className="dropbtn">
         {dropDownName}
       </Nav.Link>
@@ -57,7 +57,7 @@ const CustomNavbar = ({ pageInfo }) => {
                 <AiOutlineEnvironment size={28} />
               </Nav.Link>
             </Link>
-            <Link to="/page-2" className="link-no-style">
+            <Link to="/page-2">
               <Nav.Link as="span" eventKey="page-2">
                 <AiOutlineUserAdd size={28} />
               </Nav.Link>
