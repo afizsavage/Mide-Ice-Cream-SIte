@@ -33,16 +33,16 @@ const CustomSearchbar = () => {
       </Link>
       <div id="mySearchdown" className="search-content col-md-1">
         <Form inline onSubmit={e => e.preventDefault()}>
-          <Form.Group className="col-md-7 p-0 mr-2 col-md-8">
+          <Form.Group className="col-md-7 p-0 mr-2 col-md-7">
             <FormControl
               id="search-input"
               type="text"
               placeholder="Fake Search"
-              className="mr-2"
+              className="ml-2 mr-2"
             />
           </Form.Group>
-          <Button type="submit" className="btn btn-default align-self-end">
-            <small>search</small>
+          <Button type="submit" className="btn btn-default bg-white">
+            <small>SEARCH</small>
             <AiOutlineSearch size={14} />
           </Button>
         </Form>

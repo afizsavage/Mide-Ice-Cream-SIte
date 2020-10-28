@@ -1,19 +1,40 @@
 import React from "react"
 import { Link } from "gatsby"
 import { Navbar, Nav } from "react-bootstrap"
-import Logo from "../images/logo.png"
+import { useStaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
 import { AiOutlineUserAdd, AiOutlineEnvironment } from "react-icons/ai"
 import Searcbar from "./searchdown.js"
 
 const CustomNavbar = ({ pageInfo }) => {
+  const data = useStaticQuery(graphql`
+    query {
+      file(relativePath: { eq: "logo.png" }) {
+        childImageSharp {
+          fixed(width: 200) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+    }
+  `)
   console.log(pageInfo)
   return (
     <>
-      <Navbar variant="dark" expand="lg" id="site-navbar">
+      <Navbar
+        variant="dark"
+        expand="lg"
+        id="site-navbar"
+        className="sticky-top"
+      >
         {/* <Container> */}
         <Link to="/" className="link-no-style">
-          <Navbar.Brand as="span">
-            <img src={Logo} alt={"Mide's Ice Cream"} width={200} height={71} />
+          <Navbar.Brand as="span" className="logo">
+            <Img
+              id="logo"
+              fixed={data.file.childImageSharp.fixed}
+              alt="Mide's Ice Cream"
+            />
           </Navbar.Brand>
         </Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -28,10 +49,19 @@ const CustomNavbar = ({ pageInfo }) => {
                   FLAVOURS
                 </Nav.Link>
               </Link>
-              <div className="dropdown-content">
-                <a href="#">Link 1</a>
-                <a href="#">Link 2</a>
-                <a href="#">Link 3</a>
+              <div className="dropdown-content col-md-1">
+                <ul className="list-unstyled">
+                  <li>
+                    <Link to="flavours/milo" className="text-decoration-none">
+                      Milo Choco
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="flavours/milo" className="text-decoration-none">
+                      Custard Tart
+                    </Link>
+                  </li>
+                </ul>
               </div>
             </div>
             <div className="dropdown">
@@ -41,9 +71,13 @@ const CustomNavbar = ({ pageInfo }) => {
                 </Nav.Link>
               </Link>
               <div className="dropdown-content">
-                <a href="#">Link 1</a>
-                <a href="#">Link 2</a>
-                <a href="#">Link 3</a>
+                <ul className="list-unstyled">
+                  <li>
+                    <Link to="flavours/milo" className="text-decoration-none">
+                      Milo Choco
+                    </Link>
+                  </li>
+                </ul>
               </div>
             </div>
             <div className="dropdown">
@@ -53,9 +87,13 @@ const CustomNavbar = ({ pageInfo }) => {
                 </Nav.Link>
               </Link>
               <div className="dropdown-content">
-                <a href="#">Link 1</a>
-                <a href="#">Link 2</a>
-                <a href="#">Link 3</a>
+                <ul className="list-unstyled">
+                  <li>
+                    <Link to="flavours/milo" className="text-decoration-none">
+                      Values
+                    </Link>
+                  </li>
+                </ul>
               </div>
             </div>
             <div className="dropdown">
@@ -65,9 +103,13 @@ const CustomNavbar = ({ pageInfo }) => {
                 </Nav.Link>
               </Link>
               <div className="dropdown-content">
-                <a href="#">Link 1</a>
-                <a href="#">Link 2</a>
-                <a href="#">Link 3</a>
+                <ul className="list-unstyled">
+                  <li>
+                    <Link to="flavours/milo" className="text-decoration-none">
+                      Contact Us
+                    </Link>
+                  </li>
+                </ul>
               </div>
             </div>
           </Nav>

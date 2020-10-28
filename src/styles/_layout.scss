@@ -14,25 +14,33 @@ a.link-no-style {
 }
 
 .footer-col {
-  display: flex;
   flex-direction: column;
-  align-content: center;
-  align-items: center;
   footer {
-    display: flex;
     position: relative;
     bottom: 0;
-    margin-top: -60px;
-    height: 60px;
+    margin-top: 0;
+    height: 100%;
     clear: both;
-    background-color: $color-primary;
+    background-color: #191919;
     color: white;
-    justify-content: center;
     width: 100%;
-
+    #footer-navs {
+      color: black;
+      background-color: #191919;
+      .list-group-item {
+        font-family: "Henny Penny";
+        font-size: 1.122rem;
+        background-color: transparent;
+        margin-left: 2rem;
+        margin-left: 2rem;
+      }
+      a {
+        color: #ffffff;
+      }
+    }
     span {
-      align-self: center;
       text-align: center;
+      color: #cccccc;
     }
   }
 }

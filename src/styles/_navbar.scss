@@ -1,7 +1,12 @@
+@media (max-width: $breakpoint-mobile) {
+  #site-navbar {
+    margin-left: 0;
+    padding: 0;
+  }
+}
+
 #site-navbar {
   background-color: $color-primary;
-  position: -webkit-sticky;
-  position: sticky;
   top: 0;
   z-index: 100;
   padding-top: 0;
@@ -20,6 +25,10 @@
   .dropbtn {
     color: white;
     border: none;
+    font-family: "Droid Serif";
+    font-weight: bold;
+    font-style: normal;
+    font-size: 1.2rem;
   }
 
   .dropdown-content a {
@@ -54,8 +63,5 @@
   }
   .dropdown-content a:hover {
     background-color: $color-secondary;
-  }
-  .show {
-    display: block;
   }
 }

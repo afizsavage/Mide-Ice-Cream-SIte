@@ -7,9 +7,8 @@
 
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
-
-import { Container, Row, Col } from "react-bootstrap"
-
+import { Link } from "gatsby"
+import { Container, Row, Col, ListGroup } from "react-bootstrap"
 import Navbar from "./navBar"
 
 const Layout = ({ children, pageInfo }) => (
@@ -37,12 +36,27 @@ const Layout = ({ children, pageInfo }) => (
         </Container>
         <Container fluid className="px-0">
           <Row noGutters>
-            <Col className="footer-col">
-              <footer>
-                <span>
-                  © {new Date().getFullYear()}, Built with
-                  {` `}
-                  <a href="https://www.gatsbyjs.org">Gatsby</a>
+            <Col className="footer-col d-flex">
+              <footer className="d-flex flex-column align-items-md-center align-items-sm-start">
+                <ListGroup id="footer-navs" horizontal={"md"} className=" my-2">
+                  <ListGroup.Item>
+                    <Link to="feedback">Contact Us</Link>
+                  </ListGroup.Item>
+                  <ListGroup.Item>
+                    <Link to="terms">Terms of Use</Link>
+                  </ListGroup.Item>
+                  <ListGroup.Item>
+                    <Link to="privacy">Privacy Policy</Link>
+                  </ListGroup.Item>
+                  <ListGroup.Item>
+                    <Link to="sitemap">Sitemap</Link>
+                  </ListGroup.Item>
+                  <ListGroup.Item>
+                    <Link to="asscssibility">Accessibility</Link>
+                  </ListGroup.Item>
+                </ListGroup>
+                <span className="small">
+                  © {new Date().getFullYear()} Mide's Ice Cream, Inc
                 </span>
               </footer>
             </Col>

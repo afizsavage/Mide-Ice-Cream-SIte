@@ -15,6 +15,22 @@
     border-radius: 15px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
+
+    .form-control {
+      border: 5px solid yellowgreen;
+      width: 90%;
+    }
+    .form-control:focus {
+      border-color: #ff80ff;
+      box-shadow: 0px 1px rgba(0, 0, 0, 0.075) inset,
+        0px 0px 8px rgba(255, 100, 255, 0.5);
+    }
+
+    button {
+      color: $color-secondary;
+      border: none;
+      padding: 6px 10px 6px 10px;
+    }
   }
 
   .search-content::after {
@@ -32,9 +48,5 @@
   }
   .show {
     display: block;
-  }
-  #search-input {
-    border: 5px solid yellowgreen;
-    width: 95%;
   }
 }
