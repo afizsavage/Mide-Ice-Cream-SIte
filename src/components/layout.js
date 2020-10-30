@@ -7,9 +7,9 @@
 
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
-import { Link } from "gatsby"
-import { Container, Row, Col, ListGroup } from "react-bootstrap"
+import { Container, Row, Col } from "react-bootstrap"
 import Navbar from "./navBar"
+import Footer from "./footer"
 
 const Layout = ({ children, pageInfo }) => (
   <StaticQuery
@@ -37,28 +37,7 @@ const Layout = ({ children, pageInfo }) => (
         <Container fluid className="px-0">
           <Row noGutters>
             <Col className="footer-col d-flex">
-              <footer className="d-flex flex-column align-items-md-center align-items-sm-start">
-                <ListGroup id="footer-navs" horizontal={"md"} className=" my-2">
-                  <ListGroup.Item>
-                    <Link to="feedback">Contact Us</Link>
-                  </ListGroup.Item>
-                  <ListGroup.Item>
-                    <Link to="terms">Terms of Use</Link>
-                  </ListGroup.Item>
-                  <ListGroup.Item>
-                    <Link to="privacy">Privacy Policy</Link>
-                  </ListGroup.Item>
-                  <ListGroup.Item>
-                    <Link to="sitemap">Sitemap</Link>
-                  </ListGroup.Item>
-                  <ListGroup.Item>
-                    <Link to="asscssibility">Accessibility</Link>
-                  </ListGroup.Item>
-                </ListGroup>
-                <span className="small">
-                  © {new Date().getFullYear()} Mide's Ice Cream, Inc
-                </span>
-              </footer>
+              <Footer />
             </Col>
           </Row>
         </Container>
