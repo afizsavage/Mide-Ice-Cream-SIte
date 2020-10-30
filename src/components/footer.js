@@ -5,7 +5,7 @@ import { ListGroup } from "react-bootstrap"
 const Footer = () => {
   return (
     <footer className="d-flex flex-column align-items-md-center align-items-sm-start">
-      <ListGroup id="footer-navs" horizontal={"md"} className=" my-2 pt-1">
+      <ListGroup id="footer-navs" horizontal={"md"} className="py-1 my-2">
         <ListGroup.Item>
           <Link to="feedback">Contact Us</Link>
         </ListGroup.Item>
