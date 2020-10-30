@@ -1,10 +1,27 @@
 import React from "react"
 import { Link } from "gatsby"
 import { ListGroup } from "react-bootstrap"
+import { ImYoutube, ImFacebook, ImInstagram, ImTwitter } from "react-icons/im"
 
 const Footer = () => {
   return (
-    <footer className="d-flex flex-column align-items-md-center align-items-sm-start">
+    <footer className="d-flex flex-column">
+      <div className="topFooterContent py-2">
+        <div className="socialIcons">
+          <Link className="icon" to="utube.com">
+            <ImYoutube size={20} />
+          </Link>
+          <Link className="icon" to="facebook.com">
+            <ImFacebook size={20} />
+          </Link>
+          <Link className="icon" to="instagram.com">
+            <ImInstagram size={20} />
+          </Link>
+          <Link className="icon" to="twitter">
+            <ImTwitter size={20} />
+          </Link>
+        </div>
+      </div>
       <ListGroup id="footer-navs" horizontal={"md"} className="py-1 my-2">
         <ListGroup.Item>
           <Link to="feedback">Contact Us</Link>

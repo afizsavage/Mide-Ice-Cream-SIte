@@ -7,6 +7,25 @@ footer {
   background-color: #191919;
   color: white;
   width: 100%;
+  .topFooterContent {
+    width: 100%;
+    background-color: $color-cream;
+    display: flex;
+    .socialIcons {
+      width: 100%;
+      display: flex;
+      justify-content: center !important;
+      .icon {
+        margin-right: 1rem;
+        color: $color-choco;
+        padding: 0.5rem;
+        border: 2px solid;
+      }
+      .icon:last-of-type {
+        margin-right: 0;
+      }
+    }
+  }
   #footer-navs {
     color: black;
     background-color: #191919;
