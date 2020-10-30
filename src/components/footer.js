@@ -8,16 +8,16 @@ const Footer = () => {
     <footer className="d-flex flex-column">
       <div className="topFooterContent pb-4 ">
         <div className="socialIcons pb-4 pt-2 my-1">
-          <Link className="icon" to="utube.com">
+          <Link className="icon rounded-circle" to="utube.com">
             <ImYoutube size={20} />
           </Link>
-          <Link className="icon" to="facebook.com">
+          <Link className="icon rounded-circle" to="facebook.com">
             <ImFacebook size={20} />
           </Link>
-          <Link className="icon" to="instagram.com">
+          <Link className="icon rounded-circle" to="instagram.com">
             <ImInstagram size={20} />
           </Link>
-          <Link className="icon" to="twitter">
+          <Link className="icon rounded-circle" to="twitter">
             <ImTwitter size={20} />
           </Link>
         </div>

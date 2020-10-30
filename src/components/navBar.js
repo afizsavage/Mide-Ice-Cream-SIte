@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import { Navbar, Nav } from "react-bootstrap"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
-import { AiOutlineUserAdd, AiOutlineEnvironment } from "react-icons/ai"
+import { ImLocation2 } from "react-icons/im"
 import Searcbar from "./searchdown.js"
 
 const CustomNavbar = ({ pageInfo }) => {
@@ -117,10 +117,7 @@ const CustomNavbar = ({ pageInfo }) => {
           <Nav className="ml-auto">
             <Searcbar />
             <Link to="/page-2" className="dropbtn ml-3">
-              <AiOutlineEnvironment size={28} />
-            </Link>
-            <Link to="/page-2" className="dropbtn ml-3">
-              <AiOutlineUserAdd size={28} />
+              <ImLocation2 size={24} />
             </Link>
           </Nav>
         </Navbar.Collapse>

@@ -17,9 +17,11 @@ footer {
       justify-content: center !important;
       .icon {
         margin-right: 1rem;
-        color: $color-choco;
+        color: #ffffff;
+        background-color: $color-choco;
         padding: 0.5rem;
-        border: 2px solid;
+        z-index: 5;
+        opacity: 0.7;
       }
       .icon:last-of-type {
         margin-right: 0;

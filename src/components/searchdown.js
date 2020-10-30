@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import { Form, FormControl, Button } from "react-bootstrap"
-import { AiOutlineSearch } from "react-icons/ai"
+import { BiSearchAlt } from "react-icons/bi"
 
 function myFunction(e) {
   e.preventDefault()
@@ -29,7 +29,7 @@ const CustomSearchbar = () => {
         onClick={myFunction}
         className="text-decoration-none searchbtn"
       >
-        <AiOutlineSearch size={28} />
+        <BiSearchAlt size={28} />
       </Link>
       <div id="mySearchdown" className="search-content col-md-1">
         <Form inline onSubmit={e => e.preventDefault()}>
@@ -43,7 +43,7 @@ const CustomSearchbar = () => {
           </Form.Group>
           <Button type="submit" className="btn btn-default bg-white">
             <small>SEARCH</small>
-            <AiOutlineSearch size={14} />
+            <BiSearchAlt size={14} />
           </Button>
         </Form>
       </div>
