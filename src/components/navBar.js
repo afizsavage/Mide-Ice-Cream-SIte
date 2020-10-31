@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import { Navbar, Nav } from "react-bootstrap"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
-import { ImLocation2 } from "react-icons/im"
+import { ImLocation } from "react-icons/im"
 import Searcbar from "./searchdown.js"
 
 const CustomNavbar = ({ pageInfo }) => {
@@ -29,13 +29,12 @@ const CustomNavbar = ({ pageInfo }) => {
       >
         {/* <Container> */}
         <Link to="/" className="link-no-style">
-          <Navbar.Brand as="span" className="logo">
-            <Img
-              id="logo"
-              fixed={data.file.childImageSharp.fixed}
-              alt="Mide's Ice Cream"
-            />
-          </Navbar.Brand>
+          <Img
+            id="logo"
+            fixed={data.file.childImageSharp.fixed}
+            alt="Mide's Ice Cream"
+            className="d-block"
+          />
         </Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
@@ -117,7 +116,7 @@ const CustomNavbar = ({ pageInfo }) => {
           <Nav className="ml-auto">
             <Searcbar />
             <Link to="/page-2" className="dropbtn ml-3">
-              <ImLocation2 size={24} />
+              <ImLocation size={22} />
             </Link>
           </Nav>
         </Navbar.Collapse>

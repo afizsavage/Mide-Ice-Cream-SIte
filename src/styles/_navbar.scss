@@ -9,14 +9,10 @@
   background-color: $color-primary;
   top: 0;
   z-index: 100;
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-right: 3rem;
-  padding-left: 3rem;
-  .navbar-brand {
-    padding-top: 0;
-    padding-bottom: 0;
-  }
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
 
   .dropdown:hover .dropdown-content {
     display: block;
