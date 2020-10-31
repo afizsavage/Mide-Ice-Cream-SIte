@@ -1,10 +1,13 @@
 import React from "react"
-import { Link } from "gatsby"
 import { Navbar, Nav } from "react-bootstrap"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 import { ImLocation } from "react-icons/im"
 import Searcbar from "./searchdown.js"
+
+function myFunction(e) {
+  e.preventDefault()
+}
 
 const CustomNavbar = ({ pageInfo }) => {
   const data = useStaticQuery(graphql`
@@ -43,7 +46,11 @@ const CustomNavbar = ({ pageInfo }) => {
             activeKey={pageInfo && pageInfo.pageName}
           >
             <div className="dropdown">
-              <Link to="/page-2" className="text-decoration-none">
+              <Link
+                onClick={myFunction}
+                to="/page-2"
+                className="text-decoration-none"
+              >
                 <Nav.Link as="span" eventKey="page-2" className="dropbtn">
                   FLAVOURS
                 </Nav.Link>
@@ -64,7 +71,11 @@ const CustomNavbar = ({ pageInfo }) => {
               </div>
             </div>
             <div className="dropdown">
-              <Link to="/page-2" className="text-decoration-none">
+              <Link
+                onClick={myFunction}
+                to="/page-2"
+                className="text-decoration-none"
+              >
                 <Nav.Link as="span" eventKey="page-2" className="dropbtn">
                   CATERING
                 </Nav.Link>
@@ -80,7 +91,11 @@ const CustomNavbar = ({ pageInfo }) => {
               </div>
             </div>
             <div className="dropdown">
-              <Link to="/page-2" className="text-decoration-none">
+              <Link
+                onClick={myFunction}
+                to="/page-2"
+                className="text-decoration-none"
+              >
                 <Nav.Link as="span" eventKey="page-2" className="dropbtn">
                   VALUES
                 </Nav.Link>
@@ -96,7 +111,11 @@ const CustomNavbar = ({ pageInfo }) => {
               </div>
             </div>
             <div className="dropdown">
-              <Link to="/page-2" className="text-decoration-none">
+              <Link
+                onClick={myFunction}
+                to="/page-2"
+                className="text-decoration-none"
+              >
                 <Nav.Link as="span" eventKey="page-2" className="dropbtn">
                   ABOUT US
                 </Nav.Link>
