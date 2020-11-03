@@ -6,7 +6,7 @@ import { ImYoutube, ImFacebook, ImInstagram, ImTwitter } from "react-icons/im"
 const Footer = () => {
   return (
     <footer className="d-flex flex-column">
-      <div className="d-flex flex-column topFooterContent py-4">
+      <div className="d-flex flex-column overflow-hidden topFooterContent py-4">
         <Row className="row connect">
           <Col sm className="contact justify-content-center">
             {" "}
@@ -28,23 +28,23 @@ const Footer = () => {
           </Col>
           <Col sm className="newsletter">
             {" "}
-            <div className="inner-newsletter">
+            <div className="inner-newsletter col-lg-10">
               <h3>Be A Part Of The Family</h3>
               <Form>
                 <Form.Row controlId="exampleForm.ControlInput1">
                   {" "}
-                  <Form.Label className="">
+                  <Form.Label className="col-lg-8">
                     Get the latest on deals, offers and more by signing up for
                     our email newsletter.{" "}
                   </Form.Label>
-                  <Col lg={4}>
+                  <Col lg={6}>
                     <Form.Control
                       className="mail"
                       type="email"
                       placeholder="name@example.com"
                     />
                   </Col>{" "}
-                  <Col lg={2}>
+                  <Col lg={1}>
                     <Button type="submit">Submit</Button>
                   </Col>
                 </Form.Row>
