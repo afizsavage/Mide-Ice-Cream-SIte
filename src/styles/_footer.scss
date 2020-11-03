@@ -11,6 +11,12 @@ footer {
     width: 100%;
     background-color: $color-cream;
     display: flex;
+    .contact {
+      z-index: 5;
+      border-right: 1px dashed rgba(210, 105, 30, 0.7);
+      -webkit-background-clip: padding-box; /* for Safari */
+      background-clip: padding-box; /* Firefox 4+, Opera, Chrome */
+    }
     .socialIcons {
       width: 100%;
       display: flex;
