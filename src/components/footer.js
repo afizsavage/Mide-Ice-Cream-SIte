@@ -1,19 +1,19 @@
 import React from "react"
 import { Link } from "gatsby"
-import { ListGroup, Form, Row, Col } from "react-bootstrap"
+import { ListGroup, Form, Row, Col, Button } from "react-bootstrap"
 import { ImYoutube, ImFacebook, ImInstagram, ImTwitter } from "react-icons/im"
 
 const Footer = () => {
   return (
     <footer className="d-flex flex-column">
-      <div className="d-flex flex-column topFooterContent pb-4">
+      <div className="d-flex flex-column topFooterContent py-4">
         <Row className="row connect">
           <Col sm className="contact justify-content-center">
             {" "}
             <div className="inner-contact col-md-8 offset-lg-6 col-lg-5">
+              <h3>Connect with us</h3>
               <Form>
                 <Form.Group controlId="exampleForm.ControlSelect1">
-                  <h3>Connect with us</h3>
                   <Form.Label>How can we help you?</Form.Label>
                   <Form.Control as="select">
                     <option>1</option>
@@ -26,14 +26,28 @@ const Footer = () => {
               </Form>
             </div>
           </Col>
-          <Col sm className=" newsletter">
+          <Col sm className="newsletter">
             {" "}
             <div className="inner-newsletter">
+              <h3>Be A Part Of The Family</h3>
               <Form>
-                <Form.Group controlId="exampleForm.ControlInput1">
-                  <Form.Label>Email address</Form.Label>
-                  <Form.Control type="email" placeholder="name@example.com" />
-                </Form.Group>
+                <Form.Row controlId="exampleForm.ControlInput1">
+                  {" "}
+                  <Form.Label className="">
+                    Get the latest on deals, offers and more by signing up for
+                    our email newsletter.{" "}
+                  </Form.Label>
+                  <Col lg={4}>
+                    <Form.Control
+                      className="mail"
+                      type="email"
+                      placeholder="name@example.com"
+                    />
+                  </Col>{" "}
+                  <Col lg={2}>
+                    <Button type="submit">Submit</Button>
+                  </Col>
+                </Form.Row>
               </Form>
             </div>
           </Col>
