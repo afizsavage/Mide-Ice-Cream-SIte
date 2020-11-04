@@ -15,7 +15,7 @@ const Footer = () => {
               <Form>
                 <Form.Group controlId="exampleForm.ControlSelect1">
                   <Form.Label>How can we help you?</Form.Label>
-                  <Form.Control as="select">
+                  <Form.Control className="contact-select" as="select">
                     <option>1</option>
                     <option>2</option>
                     <option>3</option>
