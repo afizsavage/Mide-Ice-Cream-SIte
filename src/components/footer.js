@@ -10,8 +10,8 @@ const Footer = () => {
         <Row className="row connect">
           <Col sm className="contact pt-md-3 justify-content-center pr-md-5">
             {" "}
-            <div className="inner-contact col-md-8 offset-lg-7 col-lg-5">
-              <h3>Connect with us</h3>
+            <div className="inner-contact col-md-8 offset-lg-6 col-lg-6">
+              <h3>Connect with Us</h3>
               <Form>
                 <Form.Group controlId="exampleForm.ControlSelect1">
                   <Form.Label>How can we help you?</Form.Label>
@@ -29,13 +29,12 @@ const Footer = () => {
           <Col sm className="newsletter pt-md-3 pb-4 pl-lg-5">
             {" "}
             <div className="inner-newsletter col-lg-10">
-              <h3>Be A Part Of The Family</h3>
+              <h3>It's Like Dessert For Your Inbox</h3>
               <Form>
                 <Form.Row controlId="exampleForm.ControlInput1">
                   {" "}
-                  <Form.Label className="col-lg-8">
-                    Get the latest on deals, offers and more by signing up for
-                    our email newsletter.{" "}
+                  <Form.Label className="col-lg-11">
+                    Sign Up For Our Email Newsletter And Get The Inside Scoop{" "}
                   </Form.Label>
                   <Col lg={6}>
                     <Form.Control
@@ -45,7 +44,12 @@ const Footer = () => {
                     />
                   </Col>{" "}
                   <Col lg={1}>
-                    <Button type="submit">Submit</Button>
+                    <Button
+                      className="b-white bg-white text-primary"
+                      type="submit"
+                    >
+                      Subscribe
+                    </Button>
                   </Col>
                 </Form.Row>
               </Form>
@@ -86,7 +90,7 @@ const Footer = () => {
       </ListGroup>
       <p className="copyright mb-3">
         © {new Date().getFullYear()} Mide's Ice Cream, Inc. All Right Reserved.
-        Terms &amp; Privacy
+        Privacy &amp; Terms
       </p>
     </footer>
   )

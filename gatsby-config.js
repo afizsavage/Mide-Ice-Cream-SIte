@@ -10,7 +10,7 @@ module.exports = {
       resolve: "gatsby-plugin-web-font-loader",
       options: {
         google: {
-          families: ["Droid Sans", "Droid Serif", "Henny Penny"],
+          families: ["Lato", "Henny Penny", "Calistoga"],
         },
       },
     },

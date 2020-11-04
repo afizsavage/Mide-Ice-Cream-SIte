@@ -11,6 +11,21 @@ footer {
     width: 100%;
     background-color: $color-cream;
     display: flex;
+    h3 {
+      font-family: Calistoga, Georgia, "Times New Roman", serif;
+      font-size: 1.63rem;
+      font-weight: 600;
+    }
+    .newsletter {
+      label {
+        font-size: 1.25rem;
+        font-weight: 500;
+      }
+    }
+    label {
+      font-size: 1.25rem;
+      font-weight: 700;
+    }
     .contact {
       z-index: 5;
       border-right: 1px dashed rgba(210, 105, 30, 0.7);
@@ -46,7 +61,7 @@ footer {
       margin-right: 2.1rem;
       padding: 0;
       a {
-        font-family: "Henny Penny";
+        font-family: "Henny Penny", "Times New Roman", serif;
         text-decoration: none;
         color: #ffffff;
         position: relative;
