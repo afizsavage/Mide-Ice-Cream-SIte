@@ -36,19 +36,16 @@ const Footer = () => {
                   <Form.Label className="col-lg-11">
                     Sign Up For Our Email Newsletter And Get The Inside Scoop{" "}
                   </Form.Label>
-                  <Col lg={6}>
+                  <Col md={6}>
                     <Form.Control
                       className="mail"
                       type="email"
                       placeholder="name@example.com"
                     />
                   </Col>{" "}
-                  <Col lg={1}>
-                    <Button
-                      className="b-white bg-white text-primary"
-                      type="submit"
-                    >
-                      Subscribe
+                  <Col md={4}>
+                    <Button variant="primary" type="submit">
+                      SUBSCRIBE
                     </Button>
                   </Col>
                 </Form.Row>
