@@ -5,10 +5,6 @@ import Img from "gatsby-image"
 import Searcbar from "./searchdown.js"
 import Location from "./location"
 
-function myFunction(e) {
-  e.preventDefault()
-}
-
 const CustomNavbar = ({ pageInfo }) => {
   const data = useStaticQuery(graphql`
     query {
@@ -46,14 +42,8 @@ const CustomNavbar = ({ pageInfo }) => {
             activeKey={pageInfo && pageInfo.pageName}
           >
             <div className="dropdown">
-              <Link
-                onClick={myFunction}
-                to="/page-2"
-                className="text-decoration-none"
-              >
-                <Nav.Link as="span" eventKey="page-2" className="dropbtn">
-                  FLAVOURS
-                </Nav.Link>
+              <Link to="/page-2" className="navlink text-decoration-none">
+                FLAVOURS
               </Link>
               <div className="dropdown-content col-md-1">
                 <ul className="list-unstyled">
@@ -71,14 +61,8 @@ const CustomNavbar = ({ pageInfo }) => {
               </div>
             </div>
             <div className="dropdown">
-              <Link
-                onClick={myFunction}
-                to="/page-2"
-                className="text-decoration-none"
-              >
-                <Nav.Link as="span" eventKey="page-2" className="dropbtn">
-                  CATERING
-                </Nav.Link>
+              <Link to="/page-2" className="navlink text-decoration-none">
+                CATERING
               </Link>
               <div className="dropdown-content">
                 <ul className="list-unstyled">
@@ -91,14 +75,8 @@ const CustomNavbar = ({ pageInfo }) => {
               </div>
             </div>
             <div className="dropdown">
-              <Link
-                onClick={myFunction}
-                to="/page-2"
-                className="text-decoration-none"
-              >
-                <Nav.Link as="span" eventKey="page-2" className="dropbtn">
-                  VALUES
-                </Nav.Link>
+              <Link to="/page-2" className="navlink text-decoration-none">
+                VALUES
               </Link>
               <div className="dropdown-content">
                 <ul className="list-unstyled">
@@ -111,14 +89,8 @@ const CustomNavbar = ({ pageInfo }) => {
               </div>
             </div>
             <div className="dropdown">
-              <Link
-                onClick={myFunction}
-                to="/page-2"
-                className="text-decoration-none"
-              >
-                <Nav.Link as="span" eventKey="page-2" className="dropbtn">
-                  ABOUT US
-                </Nav.Link>
+              <Link to="/page-2" className="navlink text-decoration-none">
+                ABOUT US
               </Link>
               <div className="dropdown-content">
                 <ul className="list-unstyled">

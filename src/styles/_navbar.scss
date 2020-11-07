@@ -15,8 +15,8 @@
   padding-right: 0.8rem;
 
   .dropdown {
-    .dropbtn {
-      color: white;
+    .navlink {
+      color: #ffffff;
       border: none;
       font-family: Calistoga, Georgia, "Times New Roman", serif;
       font-weight: bold;
@@ -24,12 +24,15 @@
       padding: 0rem 0.5rem 0.1rem 0rem;
       margin-right: 0.9rem;
       letter-spacing: 0.09rem;
+      background-color: transparent;
+      padding: 0.2rem 0.3rem 0.5rem 0.3rem;
     }
 
     .dropdown-content {
       padding: 10px;
       display: none;
       position: absolute;
+      top: 50px;
       left: -100px;
       background-color: $color-secondary;
       min-width: 280px;
