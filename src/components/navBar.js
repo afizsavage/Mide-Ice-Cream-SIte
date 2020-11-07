@@ -2,8 +2,8 @@ import React from "react"
 import { Navbar, Nav } from "react-bootstrap"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import Img from "gatsby-image"
-import { ImLocation } from "react-icons/im"
 import Searcbar from "./searchdown.js"
+import Location from "./location"
 
 function myFunction(e) {
   e.preventDefault()
@@ -134,9 +134,7 @@ const CustomNavbar = ({ pageInfo }) => {
 
           <Nav className="ml-auto">
             <Searcbar />
-            <Link to="/page-2" className="dropbtn ml-3">
-              <ImLocation size={22} />
-            </Link>
+            <Location />
           </Nav>
         </Navbar.Collapse>
         {/* </Container> */}

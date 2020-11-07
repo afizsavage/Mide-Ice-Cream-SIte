@@ -3,8 +3,9 @@
 
 @import "layout";
 @import "navbar";
-@import "searchdown.scss";
+@import "searchdown";
 @import "footer";
+@import "location";
 @media (max-width: $breakpoint-mobile) {
   #site-navbar {
     padding: 0;
