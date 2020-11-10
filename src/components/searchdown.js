@@ -31,7 +31,7 @@ const CustomSearchbar = () => {
       >
         <ImSearch size={22} />
       </Link>
-      <div id="mySearchdown" className="search-content col-md-1">
+      <div id="mySearchdown" className="search-content">
         <Form inline onSubmit={e => e.preventDefault()}>
           <Form.Group className="col-md-7 p-0 mr-2 col-md-7">
             <FormControl

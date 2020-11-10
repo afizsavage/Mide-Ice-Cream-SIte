@@ -8,9 +8,9 @@ const Footer = () => {
     <footer className="d-flex flex-column">
       <div className="d-flex flex-column overflow-hidden topFooterContent py-4">
         <Row className="row connect">
-          <Col sm className="contact pt-md-3 justify-content-center pr-md-5">
+          <Col sm className="contact pt-md-3 justify-content-center pr-lg-5">
             {" "}
-            <div className="inner-contact col-md-8 offset-lg-6 col-lg-6">
+            <div className="inner-contact col-md-8 offset-md-4 offset-lg-6 col-lg-6">
               <h3>Connect with Us</h3>
               <Form>
                 <Form.Group controlId="exampleForm.ControlSelect1">
