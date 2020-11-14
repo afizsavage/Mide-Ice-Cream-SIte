@@ -29,12 +29,27 @@ const Navlinks = ({ pageInfo }) => {
         </li>
         <li className="dropdown">
           <Link to="/page-2" className="navlink text-decoration-none">
-            CATERING
+            SHOPS &amp; CATERING
           </Link>
           <ul id="catering" className="dropdown-content list-unstyled">
             <li>
               <Link to="flavours/milo" className="text-decoration-none">
-                Milo Choco
+                <span>Home</span>
+              </Link>
+            </li>
+            <li>
+              <Link to="flavours/milo" className="text-decoration-none">
+                <span>Find an Ice Cream Shop</span>
+              </Link>
+            </li>
+            <li>
+              <Link to="flavours/milo" className="text-decoration-none">
+                <span>Ice Cream Catering</span>
+              </Link>
+            </li>
+            <li>
+              <Link to="flavours/milo" className="text-decoration-none">
+                <span>Ice Cream Cakes</span>
               </Link>
             </li>
           </ul>
@@ -46,7 +61,17 @@ const Navlinks = ({ pageInfo }) => {
           <ul id="values" className="list-unstyled dropdown-content">
             <li>
               <Link to="flavours/milo" className="text-decoration-none">
-                Values
+                <span>Overview</span>
+              </Link>
+            </li>
+            <li>
+              <Link to="flavours/milo" className="text-decoration-none">
+                <span>How We Do Business</span>
+              </Link>
+            </li>
+            <li>
+              <Link to="flavours/milo" className="text-decoration-none">
+                <span>Issues We Care About</span>
               </Link>
             </li>
           </ul>
@@ -58,7 +83,17 @@ const Navlinks = ({ pageInfo }) => {
           <ul id="contact" className="dropdown-content list-unstyled">
             <li>
               <Link to="flavours/milo" className="text-decoration-none">
-                Contact Us
+                <span>Overview</span>
+              </Link>
+            </li>
+            <li>
+              <Link to="flavours/milo" className="text-decoration-none">
+                <span>How We Make Ice Cream</span>
+              </Link>
+            </li>
+            <li>
+              <Link to="flavours/milo" className="text-decoration-none">
+                <span>Contact Us</span>
               </Link>
             </li>
           </ul>

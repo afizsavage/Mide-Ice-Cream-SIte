@@ -12,6 +12,7 @@
     letter-spacing: 0.09rem;
     background-color: transparent;
     padding: 0.2rem 0.3rem 0.5rem 0.3rem;
+    word-spacing: 0px;
   }
 
   .dropdown-content {
@@ -25,18 +26,11 @@
     border-radius: 15px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
+    list-style: none;
     .show {
       display: block;
     }
-    a {
-      color: black;
-      padding: 12px 16px;
-      text-decoration: none;
-      display: block;
-    }
-    a:hover {
-      background-color: $color-secondary;
-    }
+
     li:first-of-type {
       padding-top: 0.65rem;
     }
@@ -44,13 +38,26 @@
     li {
       display: block;
       margin-bottom: 0.3125rem !important;
-      padding: 0px;
+      padding: 0;
+      list-style: none;
+      line-height: 1;
       a {
-        font-weight: bold;
+        padding: 7px 2.485rem 7px 1.3rem;
+        display: block;
+        color: #ffffff;
+        position: relative;
+        margin: 0;
+        text-align: left;
+        font-weight: 700;
         font-size: 1.08rem;
-        padding-top: 7px;
-        padding-bottom: 7px;
+        span {
+          display: inline;
+          line-height: 1;
+        }
       }
+    }
+    li:last-of-type {
+      padding-bottom: 0.68rem;
     }
   }
   .dropdown-content::after {
