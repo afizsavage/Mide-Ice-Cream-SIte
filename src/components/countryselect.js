@@ -1,8 +1,12 @@
 import React from "react"
-import ReactCountryFlag from "react-country-flag"
+import Flag from "react-world-flags"
 
 const CountrySelector = () => {
-  return <div className="select-country"></div>
+  return (
+    <div className="select-country">
+      <Flag code="sl" width="25" height="auto" />
+    </div>
+  )
 }
 
 export default CountrySelector

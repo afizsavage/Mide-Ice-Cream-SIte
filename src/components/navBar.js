@@ -5,6 +5,7 @@ import Img from "gatsby-image"
 import Searcbar from "./searchdown.js"
 import Location from "./location"
 import Navlinks from "./navlinks.js"
+import SelectCountry from "./countryselect"
 
 const CustomNavbar = ({ pageInfo }) => {
   const data = useStaticQuery(graphql`
@@ -42,6 +43,7 @@ const CustomNavbar = ({ pageInfo }) => {
           <Nav className="ml-auto">
             <Searcbar />
             <Location />
+            <SelectCountry />
           </Nav>
         </Navbar.Collapse>
         {/* </Container> */}

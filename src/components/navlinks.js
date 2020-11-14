@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 const Navlinks = ({ pageInfo }) => {
   return (
     <Nav className="mr-auto ml-auto" activeKey={pageInfo && pageInfo.pageName}>
-      <ul className="list-unstyled nav">
+      <ul className="list-group list-group-horizontal-md list-unstyled">
         <li className="dropdown">
           <Link to="/page-2" className="navlink text-decoration-none">
             FLAVOURS
@@ -12,12 +12,17 @@ const Navlinks = ({ pageInfo }) => {
           <ul id="flavours" className="dropdown-content list-unstyled">
             <li>
               <Link to="flavours/milo" className="text-decoration-none">
-                Milo Choco
+                <span>Milo Choco</span>
               </Link>
             </li>
             <li>
               <Link to="flavours/milo" className="text-decoration-none">
-                Custard Tart
+                <span className="d-inline">Custard Pap</span>
+              </Link>
+            </li>
+            <li>
+              <Link to="flavours/milo" className="text-decoration-none">
+                <span>Custard Pap</span>
               </Link>
             </li>
           </ul>

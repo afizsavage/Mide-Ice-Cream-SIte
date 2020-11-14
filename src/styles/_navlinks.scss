@@ -37,6 +37,21 @@
     a:hover {
       background-color: $color-secondary;
     }
+    li:first-of-type {
+      padding-top: 0.65rem;
+    }
+
+    li {
+      display: block;
+      margin-bottom: 0.3125rem !important;
+      padding: 0px;
+      a {
+        font-weight: bold;
+        font-size: 1.08rem;
+        padding-top: 7px;
+        padding-bottom: 7px;
+      }
+    }
   }
   .dropdown-content::after {
     content: "";
@@ -61,7 +76,7 @@
     right: -5.9rem;
   }
   #contact {
-    right: -5rem;
+    right: -5.2rem;
   }
 }
 
