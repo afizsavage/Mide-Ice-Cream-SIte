@@ -3,9 +3,11 @@ import Flag from "react-world-flags"
 
 const CountrySelector = () => {
   return (
-    <div className="select-country">
-      <Flag code="sl" width="25" height="auto" />
-    </div>
+    <nav id="select-country">
+      <a href="#" title="Select a Country (Sierra Leone)">
+        <Flag code="sl" width="25" height="auto" />
+      </a>
+    </nav>
   )
 }
 
