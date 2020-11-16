@@ -5,5 +5,15 @@
     width: 80px;
     height: 40px;
     background: #800000;
+    margin: 12px 5px 0 0;
+    .ddarrow {
+      display: inline-block;
+      background-image: url("../images/bitmap.png");
+      background-repeat: no-repeat, repeat;
+      background-size: 0.8em auto, 100%;
+      margin-left: 10px;
+      width: 15px;
+      height: 17px;
+    }
   }
 }
