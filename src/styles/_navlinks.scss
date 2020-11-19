@@ -1,7 +1,9 @@
 .dropdown {
-  margin: 0rem 0.4rem;
-  position: relative;
-  display: inline-block !important;
+  display: inline-block;
+    margin: 0 .2em;
+    position: relative;
+    vertical-align: baseline;
+    margin-bottom: 0!important;
   .navlink {
     color: #ffffff;
     font-family: Calistoga, Georgia, "Times New Roman", serif;
