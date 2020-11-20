@@ -3,7 +3,10 @@ import { Nav } from "react-bootstrap"
 import { Link } from "gatsby"
 const Navlinks = ({ pageInfo }) => {
   return (
-    <Nav className="mr-auto ml-auto" activeKey={pageInfo && pageInfo.pageName}>
+    <Nav
+      className="ml-auto mr-auto pl-5"
+      activeKey={pageInfo && pageInfo.pageName}
+    >
       <ul className="list-group list-group-horizontal-md list-unstyled">
         <li className="dropdown">
           <Link to="/page-2" className="navlink text-decoration-none">

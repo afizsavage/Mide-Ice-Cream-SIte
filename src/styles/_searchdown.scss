@@ -15,7 +15,7 @@
     padding: 10px;
     width: 18rem !important;
     padding: 10px;
-    display: none;
+    visibility: hidden;
     background-color: $color-secondary;
     min-width: 280px;
     border-radius: 15px;
@@ -53,6 +53,6 @@
     z-index: 1;
   }
   .show {
-    display: block;
+    visibility: visible;
   }
 }
