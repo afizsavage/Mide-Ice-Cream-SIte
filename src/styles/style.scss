@@ -31,6 +31,24 @@ a:focus {
   outline: white dotted 2px;
 }
 
-a:-webkit-any-link:focus {
+:focus {
+  outline: -webkit-focus-ring-color auto 1px;
+}
+
+/*a:-webkit-any-link:focus {
   outline-offset: 1px;
+}*/
+
+.dd-submenu {
+  position: absolute;
+  display: block;
+  visibility: hidden;
+  opacity: 0;
+  padding: 0;
+  text-align: left;
+  pointer-events: none;
+  -webkit-transition: visibility 0s, opacity 0s;
+  -moz-transition: visibility 0s, opacity 0s;
+  transition: visibility 0s, opacity 0s;
+  z-index: 5;
 }

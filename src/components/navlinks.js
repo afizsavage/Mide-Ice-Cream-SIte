@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { Nav } from "react-bootstrap"
 import { Link } from "gatsby"
 
@@ -13,16 +13,25 @@ const ListItem = props => {
 }
 
 const DDownNavs = props => {
+  const [hovered, setHovered] = useState(false)
+  const toggleHover = () => setHovered(!hovered)
+
   const lists = props.lists
   const contentItems = lists.map((index, list) => {
     return <ListItem key={list} LinkName={index} />
   })
   return (
-    <li className="dropdown">
+    <li
+      className={hovered ? "dropdown" : ""}
+      onMouseEnter={toggleHover}
+      onMouseLeave={toggleHover}
+    >
       <Link to={props.path} className="navlink text-decoration-none">
         {props.name}
       </Link>
-      <ul className="dropdown-content list-unstyled">{contentItems}</ul>
+      <ul className="dropdown-content dd-submenu list-unstyled">
+        {contentItems}
+      </ul>
     </li>
   )
 }
