@@ -18,7 +18,9 @@ nav {
         padding: 0.2rem 0.3rem 0.5rem 0.3rem;
         word-spacing: 0px;
       }
-
+      .navlink:focus {
+        outline: black dotted 2px;
+      }
       .dropdown-content {
         width: 18rem !important;
         padding: 10px;
