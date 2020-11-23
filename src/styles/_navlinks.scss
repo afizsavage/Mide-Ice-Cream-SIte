@@ -24,65 +24,22 @@ nav {
       a:focus {
         outline: black dotted 2px;
       }
-      .dropdown-content {
-        display: none;
-        width: 18rem !important;
-        padding: 10px;
-        position: absolute;
-        top: 2.2rem;
-        background-color: $color-secondary;
-        min-width: 280px;
-        border-radius: 15px;
-        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
-        z-index: 5;
-        list-style: none;
-
-        li:first-of-type {
-          padding-top: 0.65rem;
-        }
-
-        li {
-          display: block;
-          margin-bottom: 0.3125rem !important;
-          padding: 0;
-          list-style: none;
-          line-height: 1;
-          a {
-            padding: 7px 2.485rem 7px 1.3rem;
-            display: block;
-            position: relative;
-            color: $color-font1;
-            margin: 0;
-            text-align: left;
-            font-weight: 700;
-            font-size: 1.08rem;
-            span {
-              display: inline;
-              line-height: 1;
-            }
-          }
-        }
-        li:last-of-type {
-          padding-bottom: 0.68rem;
-        }
-      }
-      .dropdown-content::after {
-        content: "";
-        position: absolute;
-        right: 125px;
-        top: -17px;
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 0 17px 17px 17px;
-        background-color: transparent;
-        border-color: transparent transparent $color-secondary transparent;
-        z-index: 1;
-      }
     }
 
     li:last-of-type {
       margin-right: 0;
+    }
+    li.dd-sm-show-below {
+      .dropdown-content {
+        display: block;
+      }
+    }
+
+    li.dd-sm-show {
+      .dd-submenu {
+        visibility: visible;
+        opacity: 1;
+      }
     }
   }
 }

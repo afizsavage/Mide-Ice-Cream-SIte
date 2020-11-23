@@ -8,7 +8,7 @@ This project is currently in development. Site Footer has been completed, curren
 
 ## 🚀 Quick start
 
-**Cloning the Repository.**
+### Cloning the Repository.
 
 1.  First, navigate to the directory that you would like to clone the repository into using commands like
     - cd: to change your working directory.
@@ -22,7 +22,7 @@ This project is currently in development. Site Footer has been completed, curren
 - cd Mide-Ice-Cream-SIte/
 - ls -la
 
-**🧐 File Structure.**
+### 🧐 File Structure.
 
 A quick look at the top-level files and directories you'll see in the project.
 
@@ -71,10 +71,33 @@ A quick look at the top-level files and directories you'll see in the project.
 
 14. **`README.md`**: A text file containing useful reference information about your project.
 
-## 💫 Deploy
+### Usage.
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-hello-world)
+**Note**: **Use Node v14.0.0**
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/gatsbyjs/gatsby-starter-hello-world)
+#### Available Scripts
 
-<!-- AUTO-GENERATED-CONTENT:END -->
+In the project directory, you can run:
+
+**npm start**
+
+Runs the app in the development mode.
+Open http://localhost:8000 to view it in the browser.
+
+The page will reload if you make edits.
+You will also see any lint errors in the console.
+
+**npm test**
+
+Launches the test runner in the interactive watch mode.
+See the section about running tests for more information.
+
+**npm run build**
+
+Builds the app for production to the build folder.
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.
+Your app is ready to be deployed!
+
+See the section about deployment for more information.

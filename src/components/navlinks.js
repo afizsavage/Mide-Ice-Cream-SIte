@@ -22,7 +22,7 @@ const DDownNavs = props => {
   })
   return (
     <li
-      className={hovered ? "dropdown" : ""}
+      className={hovered ? "dd-sm-show-below dd-sm-show" : ""}
       onMouseEnter={toggleHover}
       onMouseLeave={toggleHover}
     >
