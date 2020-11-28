@@ -2,9 +2,9 @@ import React from "react"
 import { Navbar, Nav } from "react-bootstrap"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import Img from "gatsby-image"
-import Searcbar from "./searchdown.js"
+import Searcbar from "./searchdown"
 import Location from "./location"
-import Navlinks from "./navlinks.js"
+import Navlinks from "./navlinks"
 
 const CustomNavbar = ({ pageInfo }) => {
   const data = useStaticQuery(graphql`

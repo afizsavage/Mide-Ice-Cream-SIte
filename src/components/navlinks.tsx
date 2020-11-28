@@ -2,17 +2,28 @@ import React, { useState, useEffect, useRef } from "react"
 import { Nav } from "react-bootstrap"
 import { Link } from "gatsby"
 
-const ListItem = props => {
+interface Iprops {
+  lists: Array<string>
+  path: string
+  name: string
+}
+
+interface IListItemProps {
+  LinkName: string
+  key: number
+}
+
+const ListItem = ({ LinkName }: IListItemProps) => {
   return (
     <li>
       <Link to="flavours/milo" className="text-decoration-none">
-        <span>{props.LinkName}</span>
+        <span>{LinkName}</span>
       </Link>
     </li>
   )
 }
 
-const DDownNavs = props => {
+const DDownNavs = ({ lists, path, name }: Iprops) => {
   // Create a ref that we add to the element for which we want to detect outside clicks
   const ref = useRef()
   //const [hovered, setHovered] = useState(false)
@@ -20,14 +31,13 @@ const DDownNavs = props => {
 
   const DDownStatus = event => {
     setisOpen(true)
-    console.log(`${setisOpen}`)
+    console.log(`${lists}`)
   }
   useOnClickOutside(ref, () => setisOpen(false))
   //const toggleHover = () => {setHovered(!hovered)}
 
-  const lists = props.lists
-  const contentItems = lists.map((index, list) => {
-    return <ListItem key={list} LinkName={index} />
+  const contentItems = lists.map((list, index) => {
+    return <ListItem key={index} LinkName={list} />
   })
   return (
     <li
@@ -36,8 +46,8 @@ const DDownNavs = props => {
       onMouseEnter={DDownStatus}
       //onMouseLeave={toggleHover}
     >
-      <Link to={props.path} className="navlink text-decoration-none">
-        {props.name}
+      <Link to={path} className="navlink text-decoration-none">
+        {name}
       </Link>
       <ul className="dropdown-content dd-submenu list-unstyled">
         {contentItems}
