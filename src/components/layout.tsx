@@ -1,17 +1,15 @@
-/**
- * Layout component that queries for data
- * with Gatsby's StaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/static-query/
- */
-
-import React from "react"
+import React, { ReactNode } from "react"
 import { StaticQuery, graphql } from "gatsby"
 import { Container, Row, Col } from "react-bootstrap"
 import Navbar from "./navBar"
 import Footer from "./footer"
 
-const Layout = ({ children, pageInfo }) => (
+interface IProps {
+  children: ReactNode
+  pageInfo: any
+}
+
+const Layout = ({ children, pageInfo }: IProps) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {

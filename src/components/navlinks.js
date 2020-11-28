@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect, useRef } from "react"
 import { Nav } from "react-bootstrap"
 import { Link } from "gatsby"
 
@@ -13,8 +13,17 @@ const ListItem = props => {
 }
 
 const DDownNavs = props => {
-  const [hovered, setHovered] = useState(false)
-  const toggleHover = () => setHovered(!hovered)
+  // Create a ref that we add to the element for which we want to detect outside clicks
+  const ref = useRef()
+  //const [hovered, setHovered] = useState(false)
+  const [isOpen, setisOpen] = useState(false)
+
+  const DDownStatus = event => {
+    setisOpen(true)
+    console.log(`${setisOpen}`)
+  }
+  useOnClickOutside(ref, () => setisOpen(false))
+  //const toggleHover = () => {setHovered(!hovered)}
 
   const lists = props.lists
   const contentItems = lists.map((index, list) => {
@@ -22,9 +31,10 @@ const DDownNavs = props => {
   })
   return (
     <li
-      className={hovered ? "dd-sm-show-below dd-sm-show" : ""}
-      onMouseEnter={toggleHover}
-      onMouseLeave={toggleHover}
+      ref={ref}
+      className={isOpen ? "dd-sm-show-below dd-sm-show" : ""}
+      onMouseEnter={DDownStatus}
+      //onMouseLeave={toggleHover}
     >
       <Link to={props.path} className="navlink text-decoration-none">
         {props.name}
@@ -57,6 +67,36 @@ const Navlinks = ({ pageInfo }) => {
         />
       </ul>
     </Nav>
+  )
+}
+
+function useOnClickOutside(ref, handler) {
+  useEffect(
+    () => {
+      const listener = event => {
+        // Do nothing if clicking ref's element or descendent elements
+        if (!ref.current || ref.current.contains(event.target)) {
+          return
+        }
+
+        handler(event)
+      }
+
+      document.addEventListener("mousedown", listener)
+      document.addEventListener("touchstart", listener)
+
+      return () => {
+        document.removeEventListener("mousedown", listener)
+        document.removeEventListener("touchstart", listener)
+      }
+    },
+    // Add ref and handler to effect dependencies
+    // It's worth noting that because passed in handler is a new ...
+    // ... function on every render that will cause this effect ...
+    // ... callback/cleanup to run every render. It's not a big deal ...
+    // ... but to optimize you can wrap handler in useCallback before ...
+    // ... passing it into this hook.
+    [ref, handler]
   )
 }
 
