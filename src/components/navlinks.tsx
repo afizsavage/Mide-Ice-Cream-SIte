@@ -56,12 +56,9 @@ const DDownNavs = ({ lists, path, name }: Iprops) => {
   )
 }
 
-const Navlinks = ({ pageInfo }) => {
+const Navlinks = () => {
   return (
-    <Nav
-      className="ml-auto mr-auto pl-5"
-      activeKey={pageInfo && pageInfo.pageName}
-    >
+    <Nav className="ml-auto mr-auto pl-5">
       <ul className="list-group list-group-horizontal-md list-unstyled">
         <DDownNavs lists={["Milo Choco"]} path="/page-2" name="FLAVOURS" />
         <DDownNavs

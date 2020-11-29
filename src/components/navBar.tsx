@@ -6,7 +6,11 @@ import Searcbar from "./searchdown"
 import Location from "./location"
 import Navlinks from "./navlinks"
 
-const CustomNavbar = ({ pageInfo }) => {
+interface IProps {
+  pageInfo: any
+}
+
+const CustomNavbar = ({ pageInfo }: IProps) => {
   const data = useStaticQuery(graphql`
     query {
       file(relativePath: { eq: "logo.png" }) {
@@ -18,7 +22,7 @@ const CustomNavbar = ({ pageInfo }) => {
       }
     }
   `)
-  console.log(pageInfo)
+
   return (
     <>
       <Navbar
@@ -30,7 +34,6 @@ const CustomNavbar = ({ pageInfo }) => {
         {/* <Container> */}
         <Link to="/" className="link-no-style">
           <Img
-            id="logo"
             fixed={data.file.childImageSharp.fixed}
             alt="Mide's Ice Cream"
             className="d-block"
