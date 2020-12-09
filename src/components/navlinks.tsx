@@ -6,6 +6,7 @@ interface Iprops {
   lists: Array<string>
   path: string
   name: string
+  onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void
 }
 
 interface IListItemProps {
@@ -26,13 +27,16 @@ const ListItem = ({ LinkName }: IListItemProps) => {
 const DDownNavs = ({ lists, path, name }: Iprops) => {
   // Create a ref that we add to the element for which we want to detect outside clicks
   const ref = useRef()
-  //const [hovered, setHovered] = useState(false)
   const [isOpen, setisOpen] = useState(false)
 
-  const DDownStatus = event => {
+  const openDropDown = (e: any) => {
     setisOpen(true)
-    console.log(`${lists}`)
   }
+
+  const closeDropDown = (e: any) => {
+    setisOpen(false)
+  }
+
   useOnClickOutside(ref, () => setisOpen(false))
   //const toggleHover = () => {setHovered(!hovered)}
 
@@ -43,8 +47,8 @@ const DDownNavs = ({ lists, path, name }: Iprops) => {
     <li
       ref={ref}
       className={isOpen ? "dd-sm-show-below dd-sm-show" : ""}
-      onMouseEnter={DDownStatus}
-      //onMouseLeave={toggleHover}
+      onMouseEnter={openDropDown}
+      onMouseLeave={closeDropDown}
     >
       <Link to={path} className="navlink text-decoration-none">
         {name}
@@ -59,17 +63,36 @@ const DDownNavs = ({ lists, path, name }: Iprops) => {
 const Navlinks = () => {
   return (
     <Nav className="ml-auto mr-auto pl-5">
-      <ul className="list-group list-group-horizontal-md list-unstyled">
-        <DDownNavs lists={["Milo Choco"]} path="/page-2" name="FLAVOURS" />
+      <ul className="cnb-menu list-group list-group-horizontal-md list-unstyled">
         <DDownNavs
-          lists={["Milo Choco"]}
-          path="/page-2"
+          lists={[
+            "Milo Choco",
+            "Custard Tart",
+            "Vanilla Essence",
+            "Chunky Funk",
+          ]}
+          path="/page2"
+          name="FLAVOURS"
+        />
+        <DDownNavs
+          lists={[
+            "Home",
+            "Find An Ice Cream Shop",
+            "Ice Cream Catering",
+            "Ice Cream Cakes",
+          ]}
+          path="/page2"
           name="SHOPS &amp; CATERING"
         />
-        <DDownNavs lists={["Milo Choco"]} path="/page-2" name="VALUES" />
         <DDownNavs
-          lists={["Milo Choco", "Custard tart"]}
-          path="/page-2"
+          lists={["Overview", "How We Do Business", "Issues We Care About"]}
+          path="/page2"
+          name="VALUES"
+        />
+
+        <DDownNavs
+          lists={["Overview", "How We Make Ice Cream", "Contact Us"]}
+          path="/page2"
           name="ABOUT US"
         />
       </ul>

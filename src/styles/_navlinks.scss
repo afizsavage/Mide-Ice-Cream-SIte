@@ -1,45 +1,80 @@
-nav {
-  .list-group {
+.cnb-menu {
+  text-align: center;
+  font-family: Calistoga, Georgia, "Times New Roman", serif;
+  list-style: none;
+}
+
+.cnb-menu > li {
+  display: inline-block;
+  margin: 0 0.4em;
+  position: relative;
+  vertical-align: baseline;
+  margin-bottom: 0 !important;
+
+  a {
+    display: block;
+    font-weight: bold;
+    background-color: transparent;
+    word-spacing: 0px;
+    display: block;
+    color: #ffffff;
+    padding: 0 0.338rem;
+    letter-spacing: 0.09rem;
+    background-color: transparent;
+    line-height: 2.25rem;
+  }
+  a:focus {
+    outline: black dotted 2px;
+  }
+}
+
+.cnb-menu > li > a {
+  font-size: 1.9rem !important;
+}
+
+li:last-of-type {
+  margin-right: 0;
+}
+li.dd-sm-show-below {
+  .dropdown-content {
+    display: block;
+    li:first-of-type {
+      padding-top: 0.65rem;
+    }
+
     li {
-      display: inline-block;
-      margin: 0 0.4em;
-      position: relative;
-      vertical-align: baseline;
-      margin-bottom: 0 !important;
-
+      display: block;
+      margin: 0;
+      margin-bottom: 5px !important;
+      padding: 0;
+      list-style: none;
+      line-height: 1;
       a {
-        font-family: Calistoga, Georgia, "Times New Roman", serif;
+        font-family: Lato, Arial, Helvetica, sans-serif;
+        padding: 7px 2.485rem 7px 1.3rem;
         display: block;
+        position: relative;
+        color: $color-font1;
+        margin: 0;
+        text-align: left;
         font-weight: bold;
-        font-size: 1.2rem;
-        background-color: transparent;
-        word-spacing: 0px;
-        display: block;
-        color: #ffffff;
-        padding: 0 0.338rem;
-        letter-spacing: 0.09rem;
-        background-color: transparent;
-        line-height: 2.25rem;
-      }
-      a:focus {
-        outline: black dotted 2px;
+        font-size: 0.96rem;
+        line-height: 1;
+        span {
+          display: inline;
+          line-height: 1;
+        }
       }
     }
-
     li:last-of-type {
-      margin-right: 0;
+      padding-bottom: 0.68rem;
     }
-    li.dd-sm-show-below {
-      .dropdown-content {
-        display: block;
-      }
-    }
+  }
+}
 
-    li.dd-sm-show {
-      .dd-submenu {
-        visibility: visible;
-        opacity: 1;
-      }
-    }
+li.dd-sm-show {
+  .dd-submenu {
+    visibility: visible;
+    opacity: 1;
   }
 }
